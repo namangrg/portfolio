@@ -1,6 +1,6 @@
 <nav class="navbar navbar-dark bg-dark navbar-expand-md p-2">
-  <a class="navbar-brand" href="#"><img  style="height: 40px;
-    width: 40px;" src="../../assets/images/developer.png"> <span class="mt-2">{{ "WelcomeMessage" | translate }}!</span></a>
+  <a class="navbar-brand" href="#" (click)="navigatetohome()"><img  style="height: 40px; 
+    width: 40px;" src="../../assets/images/developer.png"> </a>
   <button
     class="navbar-toggler"
     type="button"
@@ -16,9 +16,12 @@
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
         <a class="nav-link welcome-heading">
-          <span class="welcome-heading">{{
+          <span class="welcome-heading">
+            <!-- {{
             "welcomeHeading" | translate
-          }}</span></a
+          }} -->
+          HindiLanguage? <span style="font-weight: 700;"> ' मेरे पोर्टफोलियो में आपका स्वागत है '</span> : <span style="font-weight: 700;">' Welcome to My PortFolio!! '</span>
+        </span></a
         >
       </li>
     </ul>

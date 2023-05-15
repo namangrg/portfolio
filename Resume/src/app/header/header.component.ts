@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 @Component({
   selector: 'app-header',
@@ -6,7 +7,7 @@ import { TranslateService } from '@ngx-translate/core';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent {
-  constructor(private translate: TranslateService) {
+  constructor(private translate: TranslateService,private router:Router) {
     translate.setDefaultLang('en');
     translate.use('en');
   }
@@ -17,5 +18,8 @@ export class HeaderComponent {
     if (page == 'LinkedIn') {
       window.open('https://www.linkedin.com/in/naman-garg-0991b722');
     }
+  }
+  navigatetohome(){
+    this.router.navigate(['/home']);
   }
 }
