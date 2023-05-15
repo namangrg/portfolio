@@ -27,6 +27,7 @@
   margin-bottom: 30px;
   padding-top: 16px;
 }
+
 .details-card:hover {
   transform: scale(
     1.2
@@ -54,4 +55,6 @@
 ::ng-deep .ant-card {
   background-image: linear-gradient(#c4dfff, #001b3a) !important;
   background-color: #c4dfff !important;
+  max-height:22vh
 }
+
