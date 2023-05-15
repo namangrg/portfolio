@@ -1,0 +1,102 @@
+<div class="main">
+  <div class="row">
+    <div class="col-md-1"></div>
+    <div class="col-md-2" (click)="backtohome()">
+      <img
+        src="../../assets//images/back.png"
+        style="height: 20px; margin: 10px"
+      />
+      <span style="font-size: 16px; cursor: pointer">{{
+        "backtopage" | translate
+      }}</span>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-6">   <span class="task-heading" style="padding-left: 40px;"  >{{'stuck' | translate}}</span></div>
+    <div class="col md-1" (click)="addHurdle()" style="cursor: pointer;padding-top: 40px;"><img src="../../assets/images/whiteplus.png" style="height: 13px;
+        padding-right: 6px;">Add Hurdle Faced</div>
+  </div>
+  <div class="row" style="display: flex; flex-wrap: wrap">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+      <div
+        style="background: #001b3a; padding: 20px; margin: 5px; min-width: 28vw"
+      >
+        <div >
+          <div  *ngFor="let detail of details" style="margin: 12px;">
+            <div style="background-color: #ffff;color: black;padding: 15px;">
+                <div style="font-size: 20px; font-weight: 700" class="text-bold">
+                    {{ detail.name }}
+                    
+                  </div>
+         <hr>
+              <div style="min-height: 2vh; font-weight: 700" class="text-bold">
+                Project Name :
+                <span style="font-weight: 400">{{ detail.project }}</span>
+              </div>
+              <div style="min-height: 3vh; font-weight: 700" class="text-bold">
+                Problem :
+                <span style="font-weight: 400">{{ detail.problem }}</span>
+              </div>
+              <div style="min-height: 6vh; font-weight: 700" class="text-bold">
+                Solution :
+                <span style="font-weight: 400">{{ detail.solution }}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-2"></div>
+    </div>
+  </div>
+
+  <nz-modal
+    [(nzVisible)]="showAddhurdleModal"
+    nzTitle="Add The Hurdle Faced"
+    nzOkText="Save"
+    nzCancelText="Cancel"
+    (nzOnCancel)="handleCancel()"
+    (nzOnOk)="handleOk()"
+    [nzOkDisabled]="isSaveDisabled()"
+  >
+    <ng-container *nzModalContent>
+      <div class="add-tool-item">
+        <label>Enter Hurdle Name<span style="color: red">*</span></label>
+        <input
+          nz-input
+          placeholder="Application Id"
+          [(ngModel)]="hurdleData.hurdleName"
+        />
+      </div>
+      <div class="add-tool-item">
+        <label>Enter Project Name<span style="color: red">*</span></label>
+        <input
+          nz-input
+          placeholder="Application Id"
+          [(ngModel)]="hurdleData.projectName"
+        />
+      </div>
+      <div class="add-tool-item">
+        <label>Enter Problem Faced<span style="color: red">*</span></label>
+        <textarea
+          nz-input
+          [(ngModel)]="hurdleData.problem"
+          placeholder="Autosize height with minimum and maximum number of lines"
+          [nzAutosize]="{ minRows: 2, maxRows: 6 }"
+        ></textarea>
+      </div>
+      <div class="add-tool-item">
+        <label
+          >Enter Solution Implemented<span style="color: red">*</span></label
+        >
+        <textarea
+          nz-input
+          [(ngModel)]="hurdleData.solution"
+          placeholder="Autosize height with minimum and maximum number of lines"
+          [nzAutosize]="{ minRows: 2, maxRows: 6 }"
+        ></textarea>
+      </div>
+    </ng-container>
+  </nz-modal>
+</div>

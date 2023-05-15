@@ -1,0 +1,57 @@
+.main {
+  background-color: #001b3a;
+
+  //   width: 99vw;
+  padding-left: 5px;
+  padding-right: 0px;
+  padding-top: 135px;
+  color: white;
+}
+.content-center {
+  width: 80vw;
+  border: 1px solid black;
+}
+.profile-bio {
+}
+.row {
+  margin-right: 0px;
+}
+.details-card {
+  min-height: 10vh;
+  min-width: 13vw;
+  box-shadow: 0 2px 3px #c4dfff, 0 1px 0px #c4dfff;
+  font-size: 30px;
+  font-weight: 600;
+  text-align: center;
+  margin-right: 35px;
+  margin-bottom: 30px;
+  padding-top: 16px;
+}
+.details-card:hover {
+  transform: scale(
+    1.2
+  ); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+.tool-view {
+  min-width: 28%;
+  max-width: 28%;
+  min-height: 15%;
+  font-size: 45px;
+  text-align: center;
+  margin: 15px;
+  border-radius: 20px;
+  margin-right: 100px;
+  border: 2px solid;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.tool-view:hover {
+  transform: scale(1.1);
+}
+::ng-deep .ant-card-bordered {
+  border: 1px solid #c4dfff !important;
+}
+::ng-deep .ant-card {
+  background-image: linear-gradient(#c4dfff, #001b3a) !important;
+  background-color: #c4dfff !important;
+}

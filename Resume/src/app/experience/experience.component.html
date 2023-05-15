@@ -1,0 +1,160 @@
+<div class="main">
+  <div class="row">
+    <div class="col-md-1"></div>
+    <div class="col-md-2" (click)="backtohome()">
+      <img
+        src="../../assets//images/back.png"
+        style="height: 20px; margin: 10px"
+      />
+      <span style="font-size: 16px;cursor: pointer;">{{ "backtopage" | translate }}</span>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+      <span class="task-heading"  >{{'experience' | translate}}</span>
+      <nz-tabset nzType="card">
+        <nz-tab *ngFor="let tab of tabs" [nzTitle]="tab.name">
+          <div *ngIf="tab.id == 1" style="color: #ffff">
+            <div class="company-name">ZS associates (Gurugram)</div>
+            <div class="designation-name">Sr. Software Engineer</div>
+            <div class="project-date">05/2022-Present</div>
+            <div class="project-container">
+              <div class="project-name">
+                Project Name: App stream Wrapper & Master Data Portal
+              </div>
+              <div class="project-details">
+                <ul>
+                  <li>
+                    ASW & MDP is a self serve application whose ambition is to
+                    help users to explore data and manage them.
+                  </li>
+                  <li>I am Responsible for enhancing Admin Module .</li>
+                  <li>
+                    Worked on creating responsive navbar with multiple
+                    functionalities.
+                  </li>
+                  <li>The project works on NG-ZORRO & ZS Library.</li>
+                  <li>
+                    Worked on JIRA and Bit Bucket for sprint planning and
+                    executing.
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <nz-divider></nz-divider>
+            <div class="project-container">
+              <div class="project-name">Project Name: Care Gaps</div>
+              <div class="project-details">
+                <ul>
+                  <li>
+                    Developing Patient waypoints showing various progression
+                    stages and List of gap between each stage.
+                  </li>
+                  <li>
+                    I am responsible for developing boiler plate setup of the
+                    project including UI Architecture and folder Structure.
+                  </li>
+                  <li>
+                    I worked on developing Landing Page including Dashboard with
+                    the help of NG-ZORRO Library .
+                  </li>
+                  <li>
+                    Worked on Highcharts and sharing data with different types
+                    of Angular sharing methods.
+                  </li>
+                  <li>Worked on AuthGuard to secure the routes.</li>
+                  <li>
+                    Worked on JIRA and Bit Bucket for sprint planning and
+                    executing.
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <nz-divider></nz-divider>
+            <div class="project-container">
+              <div class="project-name">
+                Project Name: Clinical Trial Feasibility Optimizer(CTFO)
+              </div>
+              <div class="project-details">
+                <ul>
+                  <li>
+                    CTFO 's ambition is to leverage science and innovation to
+                    improve people’s lives and be the industry leader in
+                    immunology and oncology using Trials and theirs study.
+                  </li>
+                  <li>
+                    I am Responsible for enhancing Dashboard by adding Navbars
+                    and tabs.
+                  </li>
+                  <li>
+                    Worked on handling user Notifications and sharing data with
+                    different types of Angular sharing methods.
+                  </li>
+                  <li>
+                    Understood the clinical trial domain & provided solution by
+                    managing data in compliance with regulatory standards.
+                  </li>
+                  <li>
+                    Worked on JIRA and Azure for sprint planning and executing.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div *ngIf="tab.id == 2" style="color: #ffff">
+            <div class="designation-name">Sr. Systems engineer</div>
+            <div class="project-date">01/2020-05/2022</div>
+            <div class="project-container">
+              <div class="project-name">
+              <a href="https://www.icegate.gov.in/"target="_blank"> Project Name: Indian Customs Electronic Gateway(ICEGATE).</a> 
+              </div>
+              <div class="project-details">
+                <ul>
+                  <li>
+                    ICEGATE is a national web portal of Indian Customs of CBIC
+                    which provides a e-filling services to the Trade, Cargo
+                    Carriers and other Trading Partners electronically.
+                  </li>
+                  <li>
+                    I am Responsible for creating Login-Dashboard and
+                    Registration Module with validation and different
+                    verification at different Level.
+                  </li>
+                  <li>
+                    Worked on sending the OTP on mobile as well as e-mail of the
+                    user.
+                  </li>
+                  <li>
+                    Worked on PWA functionality to download the Webforms
+                    Offline.
+                  </li>
+                  <li>
+                    Worked on Http Interceptor , AuthGuard to secure the routes.
+                  </li>
+                  <li>Developed Customized Dashboard.</li>
+                </ul>
+              </div>
+            </div>
+            <nz-divider></nz-divider>
+            <div class="designation-name">Systems engineer Trainee</div>
+            <div class="project-date">08/2019-12/2019</div>
+            <div class="project-container">
+              <div class="project-details">
+                <ul>
+                  <li>Got Trained in Python and MySQL.</li>
+                  <li>
+                    Certified as Mean Stack Developer after submitting an
+                    Industrial Project.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </nz-tab>
+      </nz-tabset>
+    </div>
+    <div class="col-md-2"></div>
+  </div>
+
+</div>

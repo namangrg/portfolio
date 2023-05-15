@@ -1,0 +1,90 @@
+<nav class="navbar navbar-dark bg-dark navbar-expand-md p-2">
+  <a class="navbar-brand" href="#"><img  style="height: 40px;
+    width: 40px;" src="../../assets/images/developer.png"> <span class="mt-2">{{ "WelcomeMessage" | translate }}!</span></a>
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-bs-toggle="collapse"
+    data-bs-target="#navbarText"
+    aria-controls="navbarText"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarText">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link welcome-heading">
+          <span class="welcome-heading">{{
+            "welcomeHeading" | translate
+          }}</span></a
+        >
+      </li>
+    </ul>
+    <span class="navbar-text ms-auto">
+      <ul class="navbar-nav">
+        <!-- <li class="nav-item">
+          <a class="nav-link" href="#"
+            >Home <span class="sr-only">(current)</span></a
+          >
+        </li> -->
+        <li class="nav-item">
+          <a class="nav-link" (click)="openPage('LinkedIn')" 
+            ><img
+              src="../../assets/images/LinkedIn_icon.svg.png"
+              alt="LinkedIn"
+          /></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#"
+            ><img
+              src="../../assets/images/Instagram_logo_2022.svg.webp"
+              alt="instagram"
+          /></a>
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            nz-popover
+            nzPopoverTitle="{{'maildetails' | translate}}"
+            [nzPopoverContent]="mailDetails"
+            nzPopoverPlacement="topLeft"
+          >
+            <img
+              src="../../assets/images/Gmail_icon_(2020).svg.webp"
+              alt="instagram"
+            />
+          </a>
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            nz-popover
+            nzPopoverTitle="{{'calldetails' | translate}}"
+            [nzPopoverContent]="phoneDetails"
+            nzPopoverPlacement="topLeft"
+          >
+            <img src="../../assets/images/5585856.png" alt="instagram" />
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="language nav-link" (click)="check('en')">ENG</a>
+        </li>
+        <li>
+          <a class="language nav-link" (click)="check('de')">हिंदी</a>
+        </li>
+      </ul>
+    </span>
+  </div>
+</nav>
+<ng-template #phoneDetails>
+  <div>
+    <span> +919717162371</span>
+  </div>
+</ng-template>
+<ng-template #mailDetails>
+  <div>
+    <span> naman.garg00206@gmail.com</span>
+  </div>
+</ng-template>

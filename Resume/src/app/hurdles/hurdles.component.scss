@@ -1,0 +1,31 @@
+.main{
+    background-color: #001B3A;
+    min-height: 100vh;
+    width: 99vw;
+    padding-left: 5px;
+    padding-right: 0px;
+    padding-top: 135px;
+    color: white; 
+}
+.add-tool-item {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+    label {
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 19px;
+      margin-bottom: 8px;
+    }
+  }
+  
+  .add-tool-selection {
+    display: flex;
+    margin-bottom: 15px;
+    label {
+      margin-right: 10px;
+    }
+  }
+  ::ng-deep .ant-btn-primary{
+background-color: #001B3A !important;
+  }

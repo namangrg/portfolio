@@ -1,0 +1,213 @@
+<div class="main">
+  <div class="row" style="min-height: 60vh">
+    <div class="col-md-2"></div>
+    <div
+      class="col-md-8 profile-bio"
+      style="display: flex; flex-direction: column; min-height: 50vh"
+    >
+      <div class="row">
+        <div class="col-md-3">
+          <div>
+            <img
+              class="col-md-12"
+              src="../../assets/images/naman.jpeg"
+              style="max-height: 40vh; max-width: 13vw"
+            />
+          </div>
+          <div
+            style="
+              font-family: 'Times New Roman', Times, serif;
+              font-size: 40px;
+            "
+          >
+            {{ "name" | translate }}
+          </div>
+          <div
+            style="
+              font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+                'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+              font-size: 20px;
+            "
+          >
+            {{ "Designation" | translate }}
+          </div>
+        </div>
+
+        <div
+          class="col-md-3"
+          style="
+            font-family: cursive;
+            font-size: 40px;
+
+            border-right: 1px solid #d8f9ff;
+          "
+        >
+          {{ "infobio" | translate }}
+        </div>
+
+        <div class="col-md-6 p-4">
+          <div style="display: flex; flex-wrap: wrap">
+            <div *ngFor="let d of details" class="details-card" (click)="someFunc($event)">
+              <a
+               
+                [href]="d.id"
+                style="color: #d8f9ff"
+              >
+                {{ d["name"] | translate }}</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8" id="skillsSet">
+      <div class="row task-heading">
+        {{ "skills" | translate }}
+      </div>
+      <div class="row" style="display: flex; flex-wrap: wrap">
+        <div
+          *ngFor="let skill of skillset"
+          style="
+            max-width: 20vw;
+            min-height: 15vw;
+            font-size: 45px;
+            text-align: center;
+            margin: 5px;
+          "
+        >
+          <div
+            *ngIf="!skill.isTrue"
+            [style.background]="skill.color"
+            style="
+              height: 100%;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              min-width: 18vw;
+              max-height: 43vh;
+              max-width: 20vw;
+            "
+            [title]="skill.name"
+          >
+            <div style="min-height: 8vh; padding-top: 40px">
+              <img [src]="skill.img" height="60px" />
+            </div>
+            <div
+              [title]="skill.name"
+              style="
+                min-height: 18vh;
+                max-height: 22vh;
+                font-weight: 600;
+                color: black;
+                overflow: hidden;
+                text-overflow: ellipsis;
+              "
+            >
+              {{ skill.name }}
+            </div>
+            <div (click)="skillDetail(skill, true)">
+              <img
+                src="../../assets/images/plus.png"
+                style="height: 20px; cursor: pointer"
+              />
+            </div>
+          </div>
+
+          <div
+            *ngIf="skill.isTrue"
+            [style.background]="'#c4dfff'"
+            style="
+              height: 100%;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              min-width: 18vw;
+              max-height: 43vh;
+              max-width: 20vw;
+            "
+            [title]="skill.description"
+          >
+            <div
+              [title]="skill.description"
+              style="
+                min-height: 18vh;
+                font-size: 26px;
+                padding: 4px;
+                color: black;
+              "
+            >
+              {{ skill.description }}
+            </div>
+            <div (click)="skillDetail(skill, false)">
+              <img src="../../assets/images/minus.png" style="height: 20px" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8" id="tool">
+      <div class="row task-heading">
+        {{ "tools" | translate }}
+      </div>
+      <div class="row" style="display: flex; flex-wrap: wrap">
+        <div *ngFor="let tool of toolsData" class="tool-view">
+          <div [title]="tool.name" style="height: 100%">
+            <div style="min-height: 8vh">{{ tool.name }}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row" id="education">
+    <div class="col-md-2"></div>
+    <div class="col-md-8" id="skillsSet">
+      <div class="row task-heading">
+        {{ "education" | translate }}
+      </div>
+      <div class="row" style="display: flex; flex-wrap: wrap">
+        <div style="background: #001b3a; padding: 20px; margin: 5px">
+          <div nz-row [nzGutter]="8">
+            <div nz-col [nzSpan]="8" *ngFor="let education of educationData">
+              <nz-card nzHoverable [nzTitle]="education.type">
+                <div
+                  style="min-height: 8vh; font-weight: 700"
+                  class="text-bold"
+                >
+                  {{ education.name }}
+                </div>
+                <div>
+                  <span style="display: block; color: #ffff; float: left">
+                    {{ education.year }}</span
+                  ><span
+                    *ngIf="education.percent != ''"
+                    style="display: block; float: right; color: #ffff"
+                    >{{ education.percent }}</span
+                  ><span
+                    style="display: block; float: right; color: #ffff"
+                    *ngIf="education.cgpa != ''"
+                    >{{ education.cgpa }}</span
+                  >
+                </div>
+              </nz-card>
+            </div>
+          </div>
+          <!-- <div class="row">{{ education.type }}</div>
+          <div class="row">{{ education.name }}</div>
+          <div class="row">{{ education.year }}</div> -->
+
+          <!-- <nz-card nzHoverable style="width: 300px" [nzTitle]="education.type">
+            <div style="display: flex">
+              <div style="">qqw</div>
+              <div style="align-self: flex-end">sdf</div>
+            </div>
+          </nz-card> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

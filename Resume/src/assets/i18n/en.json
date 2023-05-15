@@ -1,0 +1,19 @@
+{
+    "WelcomeMessage": "Hi There",
+    "welcomeHeading":"Welcome To My Resume",
+    "maildetails":"Mail Details",
+    "calldetails":"Call Details",
+    "name":"Naman Garg",
+    "Designation":"Sr. Software Engineer ",
+    "infobio":"Tenacious and Efficient Front End Engineer with 3.8+ years of Astute experience in Angular Development.",
+    "education":"Education",
+    "experience":"Experience",
+    "stuck":"Hurdles",
+    "skills":"Skills",
+    "tools":"Tools",
+    "certifications":"Certifications",
+    "aboutme":"About Me",
+    "backtopage":"Back To Home Page"
+    
+
+  }
