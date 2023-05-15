@@ -47,12 +47,12 @@
 
         <div class="col-md-6 p-4">
           <div style="display: flex; flex-wrap: wrap">
-            <div *ngFor="let d of details" class="details-card" (click)="someFunc($event)">
-              <a
-               
-                [href]="d.id"
-                style="color: #d8f9ff"
-              >
+            <div
+              *ngFor="let d of details"
+              class="details-card"
+              (click)="someFunc($event)"
+            >
+              <a [href]="d.id" style="color: #d8f9ff">
                 {{ d["name"] | translate }}</a
               >
             </div>
@@ -67,27 +67,22 @@
       <div class="row task-heading">
         {{ "skills" | translate }}
       </div>
-      <div class="row" style="display: flex; flex-wrap: wrap">
+      <div class="row" style="">
         <div
           *ngFor="let skill of skillset"
-          style="
-            max-width: 20vw;
-            min-height: 15vw;
-            font-size: 45px;
-            text-align: center;
-            margin: 5px;
-          "
+          style="text-align: center; margin: 5px"
+          class="col-md-3 skillName"
         >
           <div
             *ngIf="!skill.isTrue"
             [style.background]="skill.color"
             style="
               height: 100%;
+              min-height: 35vh;
+              max-height: 50vh;
               overflow: hidden;
               text-overflow: ellipsis;
-              min-width: 18vw;
-              max-height: 43vh;
-              max-width: 20vw;
+              position: relative;
             "
             [title]="skill.name"
           >
@@ -97,8 +92,6 @@
             <div
               [title]="skill.name"
               style="
-                min-height: 18vh;
-                max-height: 22vh;
                 font-weight: 600;
                 color: black;
                 overflow: hidden;
@@ -107,7 +100,10 @@
             >
               {{ skill.name }}
             </div>
-            <div (click)="skillDetail(skill, true)">
+            <div
+              (click)="skillDetail(skill, true)"
+              style="bottom: 0px; position: absolute; width: 100%"
+            >
               <img
                 src="../../assets/images/plus.png"
                 style="height: 20px; cursor: pointer"
@@ -121,26 +117,27 @@
             style="
               height: 100%;
               overflow: hidden;
+              min-height: 35vh;
+              max-height: 40vh;
               text-overflow: ellipsis;
-              min-width: 18vw;
-              max-height: 43vh;
-              max-width: 20vw;
+              position: relative;
             "
             [title]="skill.description"
           >
             <div
               [title]="skill.description"
-              style="
-                min-height: 18vh;
-                font-size: 26px;
-                padding: 4px;
-                color: black;
-              "
+              style="font-size: 22px; padding: 4px; color: black"
             >
               {{ skill.description }}
             </div>
-            <div (click)="skillDetail(skill, false)">
-              <img src="../../assets/images/minus.png" style="height: 20px" />
+            <div
+              (click)="skillDetail(skill, false)"
+              style="position: absolute; bottom: 0px; width: 100%"
+            >
+              <img
+                src="../../assets/images/minus.png"
+                style="height: 20px; cursor: pointer"
+              />
             </div>
           </div>
         </div>
@@ -154,8 +151,8 @@
       <div class="row task-heading">
         {{ "tools" | translate }}
       </div>
-      <div class="row" style="display: flex; flex-wrap: wrap">
-        <div *ngFor="let tool of toolsData" class="tool-view">
+      <div class="row" >
+        <div *ngFor="let tool of toolsData" class="tool-view col-md-2">
           <div [title]="tool.name" style="height: 100%">
             <div style="min-height: 8vh">{{ tool.name }}</div>
           </div>
@@ -169,13 +166,17 @@
       <div class="row task-heading">
         {{ "education" | translate }}
       </div>
-      <div class="row" style="display: flex; flex-wrap: wrap">
+      <div class="row" style="">
         <div style="background: #001b3a; padding: 20px; margin: 5px">
-          <div nz-row [nzGutter]="8">
-            <div nz-col [nzSpan]="8" *ngFor="let education of educationData">
+          <div class="row" >
+            <div  class="col-md-3" *ngFor="let education of educationData">
               <nz-card nzHoverable [nzTitle]="education.type">
                 <div
-                  style="min-height: 8vh; font-weight: 700"
+                  style="min-height: 8vh;
+                  
+                  font-weight: 700;
+                  overflow: hidden;
+                  text-overflow: ellipsis;"
                   class="text-bold"
                 >
                   {{ education.name }}

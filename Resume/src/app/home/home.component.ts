@@ -27,7 +27,7 @@ export class HomeComponent implements OnInit {
     { name: 'Bit Bucket' },
     { name: 'Azure' },
     { name: 'GIT Bash' },
-    { name: 'PostMan' },
+    { name: 'Postman' },
   ];
   educationData = [
     {
