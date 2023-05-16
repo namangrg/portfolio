@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 @Component({
@@ -11,6 +11,7 @@ export class HomeComponent implements OnInit {
     translate.setDefaultLang('en');
     translate.use('en');
   }
+  installApp: any;
   endFooter = ['ok', 'cancel'];
   details = [
     { name: 'education', isTrue: false, id: '#education' },
@@ -130,13 +131,68 @@ export class HomeComponent implements OnInit {
       element.isTrue = false;
     });
   }
+  // method() {
+  //   let deferredPrompt: any;
+  //   window.addEventListener('beforeinstallprompt', (e) => {
+  //     deferredPrompt = e;
+  //   });
+
+  //   this.installApp.addEventListener('click', async () => {
+  //     if (deferredPrompt !== null) {
+  //       deferredPrompt.prompt();
+  //       const { outcome } = await deferredPrompt.userChoice;
+  //       if (outcome === 'accepted') {
+  //         deferredPrompt = null;
+  //       }
+  //     }
+  //   });
+  // }
+  deferredPrompt: any;
+showButton = false;
+@HostListener('window:beforeinstallprompt', ['$event'])
+onbeforeinstallprompt(e:any) {
+  console.log(e);
+  // Prevent Chrome 67 and earlier from automatically showing the prompt
+  e.preventDefault();
+  // Stash the event so it can be triggered later.
+  this.deferredPrompt = e;
+  this.showButton = true;
+}
+scrollToTop(){
+  window.scroll(0,0)
+}
+backtohome() {
+  this.route.navigate(['/home']);
+}
+method() {
+  // hide our user interface that shows our A2HS button
+  this.showButton = false;
+  // Show the prompt
+  this.deferredPrompt.prompt();
+  // Wait for the user to respond to the prompt
+  this.deferredPrompt.userChoice
+  .then((choiceResult:any) => {
+  if (choiceResult.outcome === 'accepted') {
+    console.log('User accepted the A2HS prompt');
+  } else {
+    console.log('User dismissed the A2HS prompt');
+  }
+  this.deferredPrompt = null;
+});
+}
   someFunc(event: any) {
     console.log(event);
-    if (event.target.innerText.toLowerCase() == 'experience' || event.target.innerText=='अनुभव') {
+    if (
+      event.target.innerText.toLowerCase() == 'experience' ||
+      event.target.innerText == 'अनुभव'
+    ) {
       event.preventDefault();
       this.route.navigate(['/home/experience']);
     }
-    if (event.target.innerText.toLowerCase() == 'hurdles' || event.target.innerText=='स्र्कावट') {
+    if (
+      event.target.innerText.toLowerCase() == 'hurdles' ||
+      event.target.innerText == 'स्र्कावट'
+    ) {
       event.preventDefault();
       this.route.navigate(['/home/hurdles']);
     }

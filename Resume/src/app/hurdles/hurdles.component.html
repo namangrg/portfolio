@@ -1,4 +1,8 @@
 <div class="main">
+  <img src="../../assets/images/developer.png" style="" class="fixImage homeIcon" title="Go to home screen" (click)="backtohome()">
+  <img src="../../assets/images/top.png" class="fixImage scrollIcon"
+  (click)="scrollToTop()" title="Scroll to top">
+  <img src="../../assets/images/download.png" [(ngModel)]="installApp" class="fixImage pwaIcon"(click)="method()" title="Download the Resume">
   <div class="row">
     <div class="col-md-1"></div>
     <div class="col-md-2" (click)="backtohome()">

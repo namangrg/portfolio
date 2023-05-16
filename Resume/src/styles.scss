@@ -6,7 +6,24 @@
 .task-heading{
     font-size: 50px;
     font-weight: 700;
+    padding-left: 15px;
     background: linear-gradient(to left, orange, red);
     -webkit-background-clip: text;
     color: transparent;
 }
+.fixImage {
+    right: 5px;
+    position: fixed;
+    z-index: 1;
+    height: 64px;
+    cursor: pointer;
+  }
+  .scrollIcon {
+    bottom: 21vh;
+  }
+  .pwaIcon {
+    bottom: 12vh;
+  }
+  .homeIcon {
+    bottom: 20px;
+  }
