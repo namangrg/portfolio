@@ -144,7 +144,7 @@ export class HomeComponent implements OnInit {
   downloadResume(){
  let link = document.createElement("a");
         link.download = "Naman_Resume";
-        link.href = "assets/NAMAN_Resume.pdf";
+        link.href = "assets/RESUME_NAMAN_May.pdf";
         link.click();
   }
   // method() {
