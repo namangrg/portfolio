@@ -1,10 +1,10 @@
 .main {
-  background-color: #001b3a;
+  background-color: #202b31;
 
   //   width: 99vw;
   padding-left: 5px;
   padding-right: 0px;
-  padding-top: 135px;
+  padding-top: 100px;
   color: white;
 }
 .content-center {
@@ -17,30 +17,68 @@
 .row {
   margin-right: 0px;
 }
+::ng-deep .ant-btn-dashed {
+  border-color: #0ccaab !important;
+}
+.download-btn :hover {
+  transform: scale(
+    1.2
+  );
+}
+
 .details-card {
-  min-height: 10vh;
+  min-height: 7vh;
   min-width: 13vw;
-  box-shadow: 0 2px 3px #c4dfff, 0 1px 0px #c4dfff;
-  font-size: 30px;
-  font-weight: 600;
+  border-style: 2px dotted #0ccaab;
+  font-size: 20px;
+  font-weight: 400;
+  color: #ffff;
   text-align: center;
   margin-right: 35px;
   margin-bottom: 30px;
-  padding-top: 16px;
+  padding: 13px;
+  background-color: #171c22;
+  border-radius: 10px;
+  a{
+    color: #d5f5ec;
+  }
 }
-
+.details-card {
+  min-height: 7vh;
+  min-width: 13vw;
+  border-style: 2px dotted #0ccaab;
+  font-size: 20px;
+  font-weight: 400;
+  color: #ffff;
+  text-align: center;
+  margin-right: 35px;
+  margin-bottom: 30px;
+  padding: 13px;
+ 
+  border-radius: 10px;
+  a{
+    color: #d5f5ec;
+  }
+}
+.main-card{
+  background-color: #171c22;
+}
+.tool-card{
+  background-color: #202b31;
+}
 .details-card:hover {
   transform: scale(
     1.2
   ); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
 }
 .tool-view {
-  padding-top: 13px;
+  padding-top: 10px;
   font-size: 32px;
   text-align: center;
-  text-shadow: 2px 2px #ff0000;
+  max-width: fit-content;
+  // text-shadow: 2px 2px #ff0000;
   margin: 15px;
-
+  max-height: 6vh;
   overflow: hidden;
   text-overflow: ellipsis;
 }
@@ -51,12 +89,13 @@
   border: 1px solid #c4dfff !important;
 }
 ::ng-deep .ant-card {
-  background-image: linear-gradient(#c4dfff, #001b3a) !important;
-  background-color: #c4dfff !important;
+  background-image: linear-gradient(#ffff,#ffff, #202b31) !important;
+  background-color: #d5f5ec !important;
   margin: 5px !important;
 }
 .skillName {
-  font-size: 40px;
+  font-size: 34px;
+  color:#ffff ;
 }
 @media only screen and (max-width: 600px) {
   .skillName {

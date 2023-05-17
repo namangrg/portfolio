@@ -178,6 +178,7 @@ export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
      NzCarouselModule,
      NzCardModule,
      NzFormModule,
+     NzButtonModule,
 
         // ngx-translate and the loader module
         HttpClientModule,

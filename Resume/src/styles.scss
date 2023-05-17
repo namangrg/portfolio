@@ -3,27 +3,32 @@
 @import "../node_modules/ng-zorro-antd/ng-zorro-antd.min.css";
 @import "../node_modules/ng-zorro-antd/style/index.min.css";
 
-.task-heading{
-    font-size: 50px;
-    font-weight: 700;
-    padding-left: 15px;
-    background: linear-gradient(to left, orange, red);
-    -webkit-background-clip: text;
-    color: transparent;
+.task-heading {
+  font-size: 50px;
+  font-weight: 700;
+  padding-left: 15px;
+  background: linear-gradient(to left, #d5f5ec, #088c71);
+  -webkit-background-clip: text;
+  color: transparent;
 }
 .fixImage {
-    right: 5px;
-    position: fixed;
-    z-index: 1;
-    height: 64px;
-    cursor: pointer;
-  }
-  .scrollIcon {
-    bottom: 12vh;
-  }
-  .pwaIcon {
-    bottom: 21vh;
-  }
-  .homeIcon {
-    bottom: 20px;
-  }
+  right: 5px;
+  position: fixed;
+  z-index: 1;
+  height: 64px;
+  cursor: pointer;
+}
+.scrollIcon {
+  bottom: 12vh;
+}
+.pwaIcon {
+  bottom: 21vh;
+}
+.homeIcon {
+  bottom: 20px;
+}
+.clipboard {
+  width: 45px;
+  padding-bottom: 12px;
+  cursor: pointer;
+}

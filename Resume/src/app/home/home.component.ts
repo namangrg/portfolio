@@ -57,7 +57,7 @@ export class HomeComponent implements OnInit {
     {
       name: 'Angular 15',
       isTrue: false,
-      color: ' #fe6459',
+      color: ' #20272f',
       description:
         'I got Trained In MEAN Stack in 2019(Infosys-training),since then I am working on various versions of Angular including Angular 9,11,13,15',
       img: '../../assets/images/angular.png',
@@ -65,7 +65,7 @@ export class HomeComponent implements OnInit {
     {
       name: 'Bootstrap',
       isTrue: false,
-      color: '#e1c7ff',
+      color: ' #20272f',
       description:
         'I have been using Bootstrap since College days majorly for its Grids,navbars and pre-defined classes used for padding and margin,',
       img: '../../assets/images/bootstrap.png',
@@ -73,7 +73,7 @@ export class HomeComponent implements OnInit {
     {
       name: 'HTML 5',
       isTrue: false,
-      color: '#D0A331',
+      color: ' #20272f',
       description:
         'HTML is the core of frontend programming , from using predefined tags to bind Data via custom tags,HTML is the backbone of UI.',
       img: '../../assets/images/html5.png',
@@ -81,7 +81,7 @@ export class HomeComponent implements OnInit {
     {
       name: 'CSS | Less | SCSS | SASS',
       isTrue: false,
-      color: '#22f9ff',
+      color: ' #20272f',
       description:
         'I have used CSS , Less, SCSS in various projects depending on their respective requirement including style inheritence, reusing the styling.',
       img: '../../assets/images/css.png',
@@ -89,7 +89,7 @@ export class HomeComponent implements OnInit {
     {
       name: 'Web design & Design Thinking',
       isTrue: true,
-      color: '#505946  ',
+      color: ' #20272f',
       description:
         'Post 3years of UI Development my daily tasks includes Design thinking,implementing Architecture maintaining positiveCode flow.',
       img: '../../assets/images/designThinking.png',
@@ -97,7 +97,7 @@ export class HomeComponent implements OnInit {
     {
       name: 'NG-Zorro & Angular Material',
       isTrue: false,
-      color: '#fe6459',
+      color: ' #20272f',
       description:
         'Angular Supports various CSS libraries like Material ,NZ-Zorro . I have worked on Angular Material during ICEGATE project & NZ-Zorro during ASW,CareGaps,MDP.',
       img: '../../assets/images/ng-zorro.png',
@@ -105,7 +105,7 @@ export class HomeComponent implements OnInit {
     {
       name: 'Project Management Tools',
       isTrue: false,
-      color: '#D0A331',
+      color: ' #20272f',
       description:
         'Working In a AGILE methodology helped me understand more practical usage of GIT, JIRA, AZURE,BITBucket for the upliftment of the project.',
       img: '../../assets/images/jira2.png',
@@ -113,7 +113,7 @@ export class HomeComponent implements OnInit {
     {
       name: 'Strong Communication Practice',
       isTrue: false,
-      color: '#e1c7ff',
+      color: ' #20272f',
       description:
         'Strong Communication helped me throughout the tenure to avoid miscommunication and understand/develop the requirements within the specific duration',
       img: '../../assets/images/comm.png',
@@ -130,6 +130,14 @@ export class HomeComponent implements OnInit {
     this.skillset.map((element) => {
       element.isTrue = false;
     });
+   
+   
+  }
+  downloadResume(){
+ let link = document.createElement("a");
+        link.download = "Naman_Resume";
+        link.href = "assets/NAMAN_Resume.pdf";
+        link.click();
   }
   // method() {
   //   let deferredPrompt: any;
@@ -198,5 +206,18 @@ method() {
     }
 
     // rest of your code here
+  }
+  copyMessage(val: string){
+    const selBox = document.createElement('textarea');
+    selBox.style.position = 'fixed';
+    selBox.style.left = '0';
+    selBox.style.top = '0';
+    selBox.style.opacity = '0';
+    selBox.value = val;
+    document.body.appendChild(selBox);
+    selBox.focus();
+    selBox.select();
+    document.execCommand('copy');
+    document.body.removeChild(selBox);
   }
 }

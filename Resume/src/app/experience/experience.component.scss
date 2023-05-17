@@ -1,10 +1,10 @@
 .main {
-    background-color: #001B3A;
+    background-color: #202b31;
     min-height: 100vh;
     width: 99vw;
     padding-left: 5px;
     padding-right: 0px;
-    padding-top: 135px;
+    padding-top: 50px;
     color: white;
   }
 ::ng-deep .ant-divider{
@@ -30,11 +30,13 @@
     text-align: center !important;
     height: 160px !important;
     line-height: 160px !important;
-    background: #364d79 !important;
+    background: #202b31 !important;
     color: #fff !important;
     overflow: hidden !important;
   }
-
+::ng-deep .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
+   color: #202b31 !important; 
+}
   h3 {
     color: #fff;
     margin-bottom: 0;
