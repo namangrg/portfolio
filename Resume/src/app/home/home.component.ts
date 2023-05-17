@@ -87,6 +87,14 @@ export class HomeComponent implements OnInit {
       img: '../../assets/images/css.png',
     },
     {
+      name: 'React',
+      isTrue: false,
+      color: ' #20272f',
+      description:
+        'React as a framework ,I have used in to make Admin module in Icegate project.',
+      img: '../../assets/images/react.png',
+    },
+    {
       name: 'Web design & Design Thinking',
       isTrue: true,
       color: ' #20272f',
@@ -95,7 +103,7 @@ export class HomeComponent implements OnInit {
       img: '../../assets/images/designThinking.png',
     },
     {
-      name: 'NG-Zorro & Angular Material',
+      name: 'Ant & Angular Material',
       isTrue: false,
       color: ' #20272f',
       description:

@@ -69,7 +69,7 @@
         <label>Enter Hurdle Name<span style="color: red">*</span></label>
         <input
           nz-input
-          placeholder="Application Id"
+          placeholder="Enter Hurdle Name"
           [(ngModel)]="hurdleData.hurdleName"
         />
       </div>
@@ -77,7 +77,7 @@
         <label>Enter Project Name<span style="color: red">*</span></label>
         <input
           nz-input
-          placeholder="Application Id"
+          placeholder="Enter Project Name"
           [(ngModel)]="hurdleData.projectName"
         />
       </div>
@@ -86,7 +86,7 @@
         <textarea
           nz-input
           [(ngModel)]="hurdleData.problem"
-          placeholder="Autosize height with minimum and maximum number of lines"
+          placeholder="Enter Problem Faced"
           [nzAutosize]="{ minRows: 2, maxRows: 6 }"
         ></textarea>
       </div>
@@ -97,7 +97,7 @@
         <textarea
           nz-input
           [(ngModel)]="hurdleData.solution"
-          placeholder="Autosize height with minimum and maximum number of lines"
+          placeholder="Enter Solution implemented"
           [nzAutosize]="{ minRows: 2, maxRows: 6 }"
         ></textarea>
       </div>
