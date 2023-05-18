@@ -15,7 +15,9 @@ export class ExperienceComponent implements OnInit {
     translate.use('en');
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    window.scroll(0,0)
+  }
   backtohome() {
     this.route.navigate(['/home']);
   }

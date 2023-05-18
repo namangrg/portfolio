@@ -47,7 +47,9 @@ export class HurdlesComponent {
   };
   showAddhurdleModal = false;
   installApp: any;
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    window.scroll(0,0)
+  }
   backtohome() {
     this.route.navigate(['/home']);
   }

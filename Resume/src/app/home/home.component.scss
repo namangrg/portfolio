@@ -25,7 +25,10 @@
     1.2
   );
 }
-
+.img-btn{
+  display: flex;
+  justify-content: center;
+}
 .details-card {
   min-height: 7vh;
   min-width: 13vw;
@@ -100,5 +103,9 @@
 @media only screen and (max-width: 600px) {
   .skillName {
     font-size: 30px;
+  }
+  .task-heading{
+    display: flex;
+    justify-content: center;
   }
 }
