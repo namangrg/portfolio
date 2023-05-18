@@ -91,7 +91,7 @@ export class HomeComponent implements OnInit {
       isTrue: false,
       color: ' #20272f',
       description:
-        'React as a framework ,I have used in to make Admin module in Icegate project.',
+        'React as a Library ,I have used in 2 of my projects',
       img: '../../assets/images/react.png',
     },
     {
