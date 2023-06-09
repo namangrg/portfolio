@@ -75,7 +75,7 @@ export class HomeComponent implements OnInit {
       isTrue: false,
       color: ' #20272f',
       description:
-        'HTML is the core of frontend programming , from using predefined tags to bind Data via custom tags,HTML is the backbone of UI.',
+        'HTML is the core of frontend programming , from using predefined tags to bind Data via custom tags,HTML is the backbone of UI.Experience in implementing responsive web design and cross-browser compatibility',
       img: '../../assets/images/html5.png',
     },
     {
