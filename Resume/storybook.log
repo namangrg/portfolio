@@ -1,0 +1,36 @@
+npm ERR! code ERESOLVE
+npm ERR! ERESOLVE could not resolve
+npm ERR! 
+npm ERR! While resolving: @angular-devkit/build-angular@16.0.1
+npm ERR! Found: @angular/localize@15.2.9
+npm ERR! node_modules/@angular/localize
+npm ERR!   peer @angular/localize@"^15.0.0" from @ng-bootstrap/ng-bootstrap@14.1.1
+npm ERR!   node_modules/@ng-bootstrap/ng-bootstrap
+npm ERR!     @ng-bootstrap/ng-bootstrap@"^14.1.1" from the root project
+npm ERR! 
+npm ERR! Could not resolve dependency:
+npm ERR! peerOptional @angular/localize@"^16.0.0" from @angular-devkit/build-angular@16.0.1
+npm ERR! node_modules/@angular-devkit/build-angular
+npm ERR!   dev @angular-devkit/build-angular@"^16.0.1" from the root project
+npm ERR!   peer @angular-devkit/build-angular@">=14.1.0 < 17.0.0" from @storybook/angular@7.0.20
+npm ERR!   node_modules/@storybook/angular
+npm ERR!     dev @storybook/angular@"7.0.20" from the root project
+npm ERR! 
+npm ERR! Conflicting peer dependency: @angular/localize@16.0.5
+npm ERR! node_modules/@angular/localize
+npm ERR!   peerOptional @angular/localize@"^16.0.0" from @angular-devkit/build-angular@16.0.1
+npm ERR!   node_modules/@angular-devkit/build-angular
+npm ERR!     dev @angular-devkit/build-angular@"^16.0.1" from the root project
+npm ERR!     peer @angular-devkit/build-angular@">=14.1.0 < 17.0.0" from @storybook/angular@7.0.20
+npm ERR!     node_modules/@storybook/angular
+npm ERR!       dev @storybook/angular@"7.0.20" from the root project
+npm ERR! 
+npm ERR! Fix the upstream dependency conflict, or retry
+npm ERR! this command with --force or --legacy-peer-deps
+npm ERR! to accept an incorrect (and potentially broken) dependency resolution.
+npm ERR! 
+npm ERR! 
+npm ERR! For a full report see:
+npm ERR! C:\Users\naman\AppData\Local\npm-cache\_logs\2023-06-11T15_47_26_572Z-eresolve-report.txt
+
+npm ERR! A complete log of this run can be found in: C:\Users\naman\AppData\Local\npm-cache\_logs\2023-06-11T15_47_26_572Z-debug-0.log

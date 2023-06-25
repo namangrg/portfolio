@@ -63,6 +63,21 @@ export class HomeComponent implements OnInit {
       img: '../../assets/images/angular.png',
     },
     {
+      name: 'Javascript & TypeScript',
+      isTrue: false,
+      color: ' #20272f',
+      description:
+        'Having a Strong understanding of JavaScript & Typescript fundamentals, including variables, data types, functions, control flow, and object-oriented programming concepts.',
+      img: '../../assets/images/js.png',
+    },
+    {
+      name: 'Storybook & chromatic',
+      isTrue: false,
+      color: ' #20272f',
+      description: 'Storybook and Chromatic are powerful tools that can greatly enhance our development workflow when working with Angular by allowing allows us to build, test, and showcase individual UI components in isolation',
+      img: '../../assets/images/storybook.png',
+    },
+    {
       name: 'Bootstrap',
       isTrue: false,
       color: ' #20272f',
@@ -86,14 +101,7 @@ export class HomeComponent implements OnInit {
         'I have used CSS , Less, SCSS in various projects depending on their respective requirement including style inheritence, reusing the styling.',
       img: '../../assets/images/css.png',
     },
-    {
-      name: 'React',
-      isTrue: false,
-      color: ' #20272f',
-      description:
-        'React as a Library ,I have used in 2 of my projects',
-      img: '../../assets/images/react.png',
-    },
+
     {
       name: 'Web design & Design Thinking',
       isTrue: true,
@@ -138,14 +146,12 @@ export class HomeComponent implements OnInit {
     this.skillset.map((element) => {
       element.isTrue = false;
     });
-   
-   
   }
-  downloadResume(){
- let link = document.createElement("a");
-        link.download = "Naman_Resume";
-        link.href = "assets/RESUME_NAMAN_May.pdf";
-        link.click();
+  downloadResume() {
+    let link = document.createElement('a');
+    link.download = 'Naman_Resume';
+    link.href = 'assets/RESUME_NAMAN_May.pdf';
+    link.click();
   }
   // method() {
   //   let deferredPrompt: any;
@@ -164,38 +170,37 @@ export class HomeComponent implements OnInit {
   //   });
   // }
   deferredPrompt: any;
-showButton = false;
-@HostListener('window:beforeinstallprompt', ['$event'])
-onbeforeinstallprompt(e:any) {
-  console.log(e);
-  // Prevent Chrome 67 and earlier from automatically showing the prompt
-  e.preventDefault();
-  // Stash the event so it can be triggered later.
-  this.deferredPrompt = e;
-  this.showButton = true;
-}
-scrollToTop(){
-  window.scroll(0,0)
-}
-backtohome() {
-  this.route.navigate(['/home']);
-}
-method() {
-  // hide our user interface that shows our A2HS button
-  this.showButton = false;
-  // Show the prompt
-  this.deferredPrompt.prompt();
-  // Wait for the user to respond to the prompt
-  this.deferredPrompt.userChoice
-  .then((choiceResult:any) => {
-  if (choiceResult.outcome === 'accepted') {
-    console.log('User accepted the A2HS prompt');
-  } else {
-    console.log('User dismissed the A2HS prompt');
+  showButton = false;
+  @HostListener('window:beforeinstallprompt', ['$event'])
+  onbeforeinstallprompt(e: any) {
+    console.log(e);
+    // Prevent Chrome 67 and earlier from automatically showing the prompt
+    e.preventDefault();
+    // Stash the event so it can be triggered later.
+    this.deferredPrompt = e;
+    this.showButton = true;
   }
-  this.deferredPrompt = null;
-});
-}
+  scrollToTop() {
+    window.scroll(0, 0);
+  }
+  backtohome() {
+    this.route.navigate(['/home']);
+  }
+  method() {
+    // hide our user interface that shows our A2HS button
+    this.showButton = false;
+    // Show the prompt
+    this.deferredPrompt.prompt();
+    // Wait for the user to respond to the prompt
+    this.deferredPrompt.userChoice.then((choiceResult: any) => {
+      if (choiceResult.outcome === 'accepted') {
+        console.log('User accepted the A2HS prompt');
+      } else {
+        console.log('User dismissed the A2HS prompt');
+      }
+      this.deferredPrompt = null;
+    });
+  }
   someFunc(event: any) {
     console.log(event);
     if (
@@ -215,7 +220,7 @@ method() {
 
     // rest of your code here
   }
-  copyMessage(val: string){
+  copyMessage(val: string) {
     const selBox = document.createElement('textarea');
     selBox.style.position = 'fixed';
     selBox.style.left = '0';
